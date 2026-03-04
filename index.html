@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Вопрос ❤️</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    text-align:center;
+    margin-top:120px;
+    background:#fff0f5;
+}
+
+h1{
+    font-size:40px;
+}
+
+button{
+    padding:12px 25px;
+    font-size:20px;
+    margin:10px;
+    cursor:pointer;
+    border:none;
+    border-radius:10px;
+}
+
+#yes{
+    background:#ff4d6d;
+    color:white;
+}
+
+#no{
+    background:#999;
+    color:white;
+    position:relative;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Ты меня любишь? ❤️</h1>
+
+<button id="yes" onclick="love()">Да</button>
+<button id="no" onmouseover="run()">Нет</button>
+
+<script>
+function love(){
+    alert("Я тоже тебя люблю ❤️");
+}
+
+function run(){
+    const btn = document.getElementById("no");
+
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+
+    btn.style.position = "absolute";
+    btn.style.left = x + "px";
+    btn.style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
